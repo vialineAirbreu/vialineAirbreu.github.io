@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page avec Image et Lien</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+            opacity: 0; /* Initial opacity */
+        }
+
+        a {
+            text-decoration: none;
+            color: #3498db;
+            font-weight: bold;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <img id="centeredImage" src="video.jpg" alt="Vidéo d'histoire du chien coincé 😳😱">
+
+    <a href="https://t-adbar1.com/_14gw1">Cliquez ici pour voir la vidéo</a>
+
+    <script>
+        // Animation JavaScript pour faire apparaître l'image avec une transition d'opacité
+        const centeredImage = document.getElementById('centeredImage');
+        centeredImage.style.transition = 'opacity 1s ease-in-out';
+
+        // Attendre que la page soit chargée
+        document.addEventListener('DOMContentLoaded', function() {
+            // Définir l'opacité à 1 après un court délai pour déclencher l'animation
+            setTimeout(() => {
+                centeredImage.style.opacity = '1';
+            }, 100);
+        });
+    </script>
+</body>
+</html>
